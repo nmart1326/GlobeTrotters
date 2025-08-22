@@ -11,6 +11,9 @@ public class GluonMap extends Application {
 
     @Override
     public void start(Stage stage) {
+        // ---BOTTOM-MOST LAYER---(the map)
+        // -------- This code can be replaced if the new map can be successfully rendered --------
+
         // Create a MapView using the no-argument constructor
         MapView mapView = new MapView();
 
@@ -23,9 +26,10 @@ public class GluonMap extends Application {
         root.getChildren().add(mapView);
 
         Scene scene = new Scene(root, 800, 600);
-        stage.setTitle("Gluon Maps");
+        stage.setTitle("GlobeTrotter");
         stage.setScene(scene);
         stage.show();
+        // -------- This code can be replaced if the new map can be successfully rendered --------
     }
 
     public static void main(String[] args) {

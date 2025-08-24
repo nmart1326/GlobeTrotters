@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+
+<!-- Panel: This is the main container for the side panel, arranged vertically -->
+<VBox alignment="TOP_CENTER" prefWidth="300.0" spacing="10.0" style="-fx-background-color: #f8f8f8; -fx-border-color: #e0e0e0; -fx-border-width: 0 1 0 0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.globetrotters.SidePanelController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <!-- Header Section: Contains the app icon and title/subtitle -->
+        <HBox alignment="CENTER_LEFT" spacing="200.0">
+            <children>
+                <!-- App Icon Placeholder: A blue square with rounded corners -->
+                <StackPane prefHeight="40.0" prefWidth="40.0">
+                    <children>
+                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#2196f3" height="40.0" stroke="TRANSPARENT" strokeType="INSIDE" width="40.0" />
+                        <!-- You can replace this with an actual icon if needed -->
+                    </children>
+                </StackPane>
+                <!-- App Title and Subtitle -->
+                <VBox>
+                    <children>
+                        <Label text="GlobeTrotter">
+                            <font>
+                                <Font name="Inter Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label text="AI-Powered Map Assistant" textFill="#616161">
+                            <font>
+                                <Font name="Inter Regular" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin>
+        </HBox>
+
+        <!-- Search Bar: An HBox combining a search icon and a text field -->
+        <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #bdbdbd; -fx-background-color: white;">
+            <children>
+                <!-- Search Icon -->
+                <Label text="🔍" style="-fx-font-size: 16px; -fx-padding: 0 5 0 10;">
+                    <HBox.margin>
+                        <Insets right="5.0" />
+                    </HBox.margin>
+                </Label>
+                <!-- Search Input Field -->
+                <TextField fx:id="searchField" promptText="Search any place in the world..." style="-fx-background-color: transparent; -fx-border-width: 0;">
+                    <font>
+                        <Font name="Inter Regular" size="14.0" />
+                    </font>
+                    <HBox.hgrow>
+                        <javafx.scene.layout.Priority fx:constant="ALWAYS" />
+                    </HBox.hgrow>
+                </TextField>
+            </children>
+            <padding>
+                <Insets bottom="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+
+        <!-- "Ask me anything" Label: A prompt for user interaction -->
+        <Label text="Ask me anything about places" textFill="#424242">
+            <font>
+                <Font name="Inter Regular" size="14.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Label>
+        <!-- Spacer: Pushes content to the top, filling remaining vertical space -->
+        <Region VBox.vgrow="ALWAYS" />
+    </children>
+</VBox>
